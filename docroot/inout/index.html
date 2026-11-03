@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>In/Out Board · OwnTracks</title>
+  <link rel="icon" href="../static/recorder.png">
+  <style>
+    body { margin: 0; background: #f4f7fb; color: #203047; font: 16px Helvetica, sans-serif; }
+    main { max-width: 960px; margin: auto; padding: 28px 18px; }
+    a { color: #305e9f; } h1 { margin-bottom: 12px; }
+    p { line-height: 1.5; } button { padding: 10px 16px; cursor: pointer; }
+    .table-wrap { overflow-x: auto; background: white; border-radius: 12px; }
+    table { width: 100%; border-collapse: collapse; text-align: left; }
+    th, td { padding: 16px; border-bottom: 1px solid #e3e9f0; }
+    th { background: #eaf0f8; } small { display: block; margin-top: 6px; color: #526277; }
+    .badge { display: inline-block; border-radius: 20px; padding: 6px 14px; font-weight: bold; }
+    .in { background: #d9f4e4; color: #166139; } .out { background: #fde4e3; color: #982e2a; }
+    .unknown { background: #edf0f4; color: #48576b; } #notice { min-height: 24px; }
+  </style>
+</head>
+<body>
+<main>
+  <a id="home" href="../index.html">← My Own Tracks</a>
+  <h1>In/Out Board</h1>
+  <p id="description"></p>
+  <button id="refresh" type="button">Refresh now</button>
+  <p id="notice" role="status" aria-live="polite">Loading locations…</p>
+  <div class="table-wrap">
+    <table aria-label="User presence">
+      <thead><tr><th scope="col">User</th><th scope="col">Status</th><th scope="col">Last location report</th></tr></thead>
+      <tbody id="users"></tbody>
+    </table>
+  </div>
+  <p>Uses each user’s most recently reporting device. Old or missing locations show Unknown; presence is based on reported GPS coordinates.</p>
+</main>
+<script type="module" src="board.js"></script>
+</body>
+</html>
