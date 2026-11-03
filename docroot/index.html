@@ -42,6 +42,8 @@
       import { fetchApiData } from "./utils/network.js";
       import { escapeHTML } from "./utils/misc.js";
 
+      document.querySelector("#inout-link").search = window.location.search;
+
       const hours = 60 * 60 * 1000;
       const days = 24 * hours;
 
@@ -81,6 +83,7 @@
     <div>
       <ul>
         <li><a href="last/index.html">Live MAP of current locations</a></li>
+        <li><a id="inout-link" href="inout/index.html">In/Out Board</a></li>
         <li><a href="table/index.html">TABLE of current locations</a></li>
       </ul>
     </div>
