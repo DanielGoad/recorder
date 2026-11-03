@@ -21,18 +21,18 @@
 </head>
 <body>
 <main>
-  <a id="home" href="../index.html">← My Own Tracks</a>
+  <a id="home" href="../">← My Own Tracks</a>
   <h1>In/Out Board</h1>
   <p id="description"></p>
   <button id="refresh" type="button">Refresh now</button>
   <p id="notice" role="status" aria-live="polite">Loading locations…</p>
   <div class="table-wrap">
     <table aria-label="User presence">
-      <thead><tr><th scope="col">User</th><th scope="col">Status</th><th scope="col">Last location report</th></tr></thead>
+      <thead><tr><th scope="col">User</th><th scope="col">Status</th><th scope="col">Last Updated</th><th scope="col">Last Waypoint</th></tr></thead>
       <tbody id="users"></tbody>
     </table>
   </div>
-  <p>Uses each user’s most recently reporting device. Old or missing locations show Unknown; presence is based on reported GPS coordinates.</p>
+  <p>Uses each user’s most recently reporting device. Old or missing locations show Unknown. Last Waypoint is shown only when Out, with each waypoint’s last reported visit in the configured history period.</p>
 </main>
 <script type="module" src="board.js"></script>
 </body>
